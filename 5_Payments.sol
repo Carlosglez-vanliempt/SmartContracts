@@ -14,7 +14,7 @@ contract HotelRooms {
     address payable public owner;
 
     constructor() public {
-        owner = msg.sender;
+        owner = payable(msg.sender);
         currentStatus = Statuses.Vacant;
     }
 
